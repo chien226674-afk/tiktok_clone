@@ -1,0 +1,101 @@
+@use "sass:color";
+
+$padding-left-page: 20px;
+$padding-right-page: 20px;
+$padding-y-page: 12px;
+$padding-x-page: 20px;
+
+$font: "IBM Plex Sans", serif;
+
+$primary-color: #fe2c55;
+$warning-color: rgb(255, 76, 58);
+$success-color: rgb(11, 224, 155);
+$page-bg-color: rgba(18, 18, 18, 1);
+
+
+$border-color: rgba(255, 255, 255, 0.12);
+$border-style: 1px solid $border-color;
+
+$line-height: 1.5;
+
+$sidebar-w: 24rem;
+$sidebar-collapsed-w: 8rem;
+
+$transition: all 0.2s ease;
+
+$text-color: rgba(255, 255, 255, 0.9);
+
+// Header
+$header-h: 60px;
+$search-box-h: 46px;
+$search-box-w: clamp(30%, 516px, 90%);
+
+$search-box-border-color: rgba(255, 255, 255, 0.2);
+$input-bg-color: rgba(255, 255, 255, 0.12);
+$input-text-color: $text-color;
+$input-placeholder-color: rgba(255, 255, 255, 0.6);
+$input-placeholder-fweight: 500;
+
+$input-icon-color: rgba(255, 255, 255, 0.34);
+
+$search-btn-color: rgba(255, 255, 255, 0.34);
+$search-btn-color-hover: rgba(255, 255, 255, 0.9);
+$search-btn-bg-color-hover: rgba(255, 255, 255, 0.12);
+
+$divide-line-color: rgba(255, 255, 255, 0.12);
+
+$actions-btn-color: rgba(255, 255, 255, 0.9);
+$actions-btn-fweight: 600;
+
+
+// COMPONENT
+// + DropDown
+$dropdown-bg-color: rgb(37, 37, 37);
+$dropdown-list-thumb-color: rgb(54, 54, 54);
+
+$dropdown-title-color: rgba(255, 255, 255, 0.75);
+$dropdown-more-title-color: $text-color;
+$dropdown-item-bg-color-hover: rgba(255, 255, 255, 0.08);
+$dropdown-item-text-color: $text-color;
+$dropdown-item-cap-color: rgba(255, 255, 255, 0.75);
+$dropdown-item-icon-color: rgba(255, 255, 255, 0.34);
+
+
+// + Button 
+$button-primary-bg: $primary-color;
+$button-secondary-bg: rgba(255, 255, 255, 0.08);
+
+$button-primary-bg-hover: color.adjust($button-primary-bg, $blackness: 10%);
+$button-secondary-bg-hover: color.adjust($button-secondary-bg, $blackness: 60%);
+
+$button-primary-text-color: $text-color;
+
+$button-icon-size-large: 2rem;
+$button-icon-size-small: 1.6rem;
+
+
+// + Badge
+$badge-bg: $primary-color;
+
+// + Tooltip
+$tooltip-bg-color: rgba(84, 84, 84, 0.92);
+$tooltip-text-color: $text-color;
+
+// + NavbarItem
+$navItem-icon-color: $text-color;
+$navItem-hover-color: rgba(255, 255, 255, 0.07);
+
+$navItem-active-text-color: $primary-color; 
+
+$navbar-search-btn-bg: rgba(31, 31, 31, 1);
+
+$navbar-placeholder-color: rgba(255, 255, 255, 0.4);
+
+// SideSearch
+$sidebarSearch-bg-xmark-color: rgba(255, 255, 255, 0.08);
+$sidebarSearch-bg-xmark-color-hover: rgba(255, 255, 255, 0.13);
+$sidebarSearch-input-bg-color: rgba(255, 255, 255, 0.05);
+$sidebarSearch-input-border-color: rgba(255, 255, 255, 0.12);
+
+// User Suggested
+$userSuggested-header-text-color: rgba(255, 255, 255, 0.75);

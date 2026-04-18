@@ -1,0 +1,62 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.input-field {
+   border-radius: 99px;
+   border: 1px solid transparent;
+   overflow: hidden;
+   background-color: variables.$sidebarSearch-input-bg-color;
+   @include mixins.flex-row;
+   align-items: center;
+
+   &:focus-within {
+      border: 1px solid variables.$sidebarSearch-input-border-color;
+   }
+
+   input {
+      padding: 10px 4px 10px 16px;
+      caret-color: variables.$primary-color;
+      height: 40px;
+      width: 100%;
+      color: variables.$text-color;
+   }
+
+   .icon {
+      padding: 0 16px;
+      color: variables.$input-icon-color;
+      cursor: pointer;
+
+      &.loading {
+         animation: rotate 1s linear infinite;
+      }
+
+      &.hidden {
+         visibility: hidden;
+         position: absolute;
+         left: -9999px;
+      }
+   }
+}
+
+.results {
+   p {
+      
+      color: variables.$dropdown-title-color;
+      font-size: 1.4rem;
+   }
+
+   ul {
+      .search-item {
+         border-radius: 4px;
+      }
+   }
+}
+
+@keyframes rotate {
+   from {
+      rotate: 0;
+   }
+   to {
+      rotate: 360deg;
+   }
+}

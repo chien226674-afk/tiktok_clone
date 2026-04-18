@@ -1,0 +1,61 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.nav-item {
+   height: 40px;
+   width: 100%;
+   @include mixins.flex-row;
+   align-items: center;
+   // gap: 1.2rem;
+   padding: 0.4rem;
+   border-radius: 6px;
+   overflow: hidden;
+
+   &:hover {
+      background-color: variables.$navItem-hover-color;
+   }
+
+   &.active {
+      .icon, .nav-content {
+         color: variables.$navItem-active-text-color !important;
+      }
+   }
+
+   .icon-wrapper {
+      @include mixins.flex-center;
+      height: 100%;
+      width: 32px;
+
+      .icon {
+         color: variables.$text-color;
+         width: 2.8rem;
+         height: 2.8rem;
+         margin: 0.2rem;
+
+         &.live {
+            padding: 2px;
+            border: 2px solid variables.$primary-color;
+         }
+
+         &.live, &.avt {
+            border-radius: 100px;
+         }
+      }
+   }
+   
+   .nav-content {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: variables.$text-color;
+      display: flex;
+      align-items: center;
+      transition: all 0.1s ease;
+      min-width: max-content;
+      margin-left: 1.2rem;
+
+      &.hidden {
+         opacity: 0;
+      }
+   }
+}
+

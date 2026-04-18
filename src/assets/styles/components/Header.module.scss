@@ -1,0 +1,71 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+
+.header {
+   border-bottom: variables.$border-style;
+   padding-left: variables.$padding-left-page;
+   padding-right: variables.$padding-right-page;
+   height: variables.$header-h;
+   
+   .inner {
+      height: 100%;
+      width: 100%;
+      justify-content: space-between;   
+      @include mixins.flex-row;
+      gap: 20px;
+
+      .logo {
+         display: flex;
+         align-items: center;
+         min-width: 300px;
+         translate: 0 6px;
+      }
+
+      .user-actions {
+         @include mixins.flex-row;
+         justify-content: flex-end;
+         align-items: center;
+         gap: 4px;
+         min-width: 280px;
+
+         i {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-sizing: border-box;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            margin: 0 12px;   
+
+            .actions-icon {      
+               font-size: 1.6rem;
+               padding: 12px;  
+            }    
+            
+            .avt-icon {
+               $size: 42px;
+               width: $size;
+               height: $size;
+               object-fit: contain;
+               border-radius: 999px;
+               overflow: hidden;
+            }
+         }     
+
+         .message-btn {
+            $size: 40px;
+            padding: 0;
+            width: $size;
+            height: $size;
+
+            .message-icon {
+               fill: #fff;
+            }
+         }
+      }
+   }
+}

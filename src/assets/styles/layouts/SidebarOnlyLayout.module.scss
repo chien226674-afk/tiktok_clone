@@ -1,0 +1,25 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.container {
+   height: 100vh;
+   position: relative;
+
+   .side-bar {
+      position: absolute;
+   }
+
+   .main {
+      width: 100%;
+      padding-left: variables.$sidebar-w;
+   }
+}
+
+@media screen and (max-width: 992px) {
+   .container {
+      .main {
+         padding-left: variables.$sidebar-collapsed-w;
+      }
+   }
+   
+}
